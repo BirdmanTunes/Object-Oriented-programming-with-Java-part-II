@@ -29,6 +29,8 @@ public class Calculator {
             }
         }
         statistics();
+        
+        
     }
     
     private void sum() {
