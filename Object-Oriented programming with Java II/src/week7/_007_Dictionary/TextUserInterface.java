@@ -49,7 +49,12 @@ public class TextUserInterface {
 	private void translate() {
 		System.out.print("Give a word: ");
 		String word = reader.nextLine();
-		System.out.println("Translation: " + dictionary.translate(word));
-		System.out.println("");
+		if (dictionary.keySetTest(word)){
+			System.out.println("Translation: " + dictionary.translate(word));
+			System.out.println("");
+		} else {
+			System.out.println("Unknown word!");
+			System.out.println("");
+		}
 	}
 }

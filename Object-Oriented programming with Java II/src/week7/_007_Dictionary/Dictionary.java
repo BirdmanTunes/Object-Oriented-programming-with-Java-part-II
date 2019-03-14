@@ -37,4 +37,8 @@ public class Dictionary {
 		}
 		return theList;
 	}
+	
+	public boolean keySetTest(String word) {
+		return words.containsKey(word);
+	}
 }
