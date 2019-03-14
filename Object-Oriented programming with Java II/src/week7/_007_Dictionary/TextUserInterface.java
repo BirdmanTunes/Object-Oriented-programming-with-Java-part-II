@@ -9,7 +9,7 @@ public class TextUserInterface {
 
 	public TextUserInterface(Scanner reader, Dictionary dictionary) {
 		this.reader = reader;
-		this.dictionary = new Dictionary();
+		this.dictionary = dictionary;
 	}
 	
 	public void start() {
