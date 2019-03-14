@@ -17,7 +17,7 @@ public class PlaneList {
 	//prints single plane
 	public void printPlane(String search) {
 		for (Planes each:list) {
-			if (each.getName().equals(search)) {
+			if (each.getName().equalsIgnoreCase(search)) {
 				System.out.println(each.printPlane());
 			} 
 			
@@ -45,9 +45,7 @@ public class PlaneList {
 		for (Planes each:list) {
 			if (each.getName().contains(search)) {
 				return true;
-			} else {
-				return false;
-			}
+			} 
 		}
 		return false;
 	}
@@ -56,11 +54,9 @@ public class PlaneList {
 	public void setLocations(String search, String departure, String destination) {
 		
 		for (Planes each:list) {
-			if (each.getName().equals(search)) {
-				each.setDeparture(departure);
-				each.setDestination(destination);
+			if (each.getName().equalsIgnoreCase(search)) {
+				each.setFlights(departure, destination);
 			}
-			
 		}
 	}
 }

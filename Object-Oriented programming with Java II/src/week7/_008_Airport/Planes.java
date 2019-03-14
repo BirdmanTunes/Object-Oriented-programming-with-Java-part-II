@@ -29,11 +29,8 @@ public class Planes {
 		capacity=newCapacity;
 	}
 	
-	public void setDeparture(String newDeparture) {
+	public void setFlights(String newDeparture, String newDestination) {
 		departure=newDeparture;
-	}
-	
-	public void setDestination(String newDestination) {
 		destination=newDestination;
 	}
 	

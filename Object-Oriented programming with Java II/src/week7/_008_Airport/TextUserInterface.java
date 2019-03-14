@@ -8,9 +8,9 @@ public class TextUserInterface {
 	private PlaneList planeList;
 	private Planes newPlane;
 
-	public TextUserInterface(Scanner reader, PlaneList planeList) {
+	public TextUserInterface(Scanner reader) {
 		this.reader = reader;
-		this.planeList = planeList;
+		this.planeList = new PlaneList();
 	}
 	
 	public void start() {
@@ -69,7 +69,6 @@ public class TextUserInterface {
 			} else if (sc.equals("3")) {
 				printPlaneInfo();
 			} else if (sc.equalsIgnoreCase("x")) {
-				airPortPanel();
 				break;
 			}
 		}
