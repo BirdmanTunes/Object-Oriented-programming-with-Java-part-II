@@ -1,4 +1,4 @@
-package week7._009_Car_Registration_Centre;
+package week8._009_Car_Registration_Centre;
 
 public class RegistrationPlate {
     // ATTENTION: the object variable types are final, meaning that their value cannot be changed!

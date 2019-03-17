@@ -1,11 +1,11 @@
-package week7._010_NationalService;
+package week8._010_NationalService;
 
-public class MilitaryService implements NationalService {
+public class CivilService implements NationalService{
 	
 	private int daysLeft;
 	
-	public MilitaryService(int daysLeft) {
-		this.daysLeft=daysLeft;
+	public CivilService() {
+		daysLeft = 362;
 	}
 	
 	@Override
