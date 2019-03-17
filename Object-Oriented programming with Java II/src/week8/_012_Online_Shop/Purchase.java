@@ -24,5 +24,4 @@ public class Purchase {
 	public String toString() {
 		return product + ": " + amount;
 	}
-
 }

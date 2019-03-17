@@ -52,5 +52,4 @@ public class Storehouse {
 		
 		return prods;
 	}
-
 }
