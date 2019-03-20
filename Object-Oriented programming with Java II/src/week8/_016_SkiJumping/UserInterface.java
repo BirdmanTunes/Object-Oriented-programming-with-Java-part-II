@@ -2,7 +2,7 @@ package week8._016_SkiJumping;
 
 import java.util.Scanner;
 
-public class UserInterface {
+public class UserInterface extends ActionHandler{
 	
 	Scanner sc = new Scanner(System.in);
 	
@@ -19,7 +19,7 @@ public class UserInterface {
 			if (name.equals("")) {
 				break;
 			} else {
-				ActionHandler.list.add(new Player(name));
+				list.add(new Player(name));
 			}
 		}
 		
@@ -36,7 +36,7 @@ public class UserInterface {
 				if (command.equals("")) {
 					break;
 				} else if (command.equalsIgnoreCase("jump")){
-					ActionHandler.round(i);
+					round(i);
 					i++;
 				}
 				
@@ -46,6 +46,6 @@ public class UserInterface {
 		System.out.println("");
 		System.out.println("Tournament results:");
 		System.out.println("Position    Name");
-		ActionHandler.printFinal();
+		printFinal();
 	}
 }
