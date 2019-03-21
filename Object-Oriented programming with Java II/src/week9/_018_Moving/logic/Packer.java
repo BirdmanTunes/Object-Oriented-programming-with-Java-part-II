@@ -23,14 +23,13 @@ public class Packer {
     	
     	for (Thing each: things) {
     		
-    		if (each.getVolume() > ofThings.getMax() - ofThings.getVolume()) {
+    		if (each.getVolume() >  ofThings.getMax() - ofThings.getVolume()) {
     			ofstuff.add(ofThings);
     			ofThings = new Box(maximumCapacity);
     			ofThings.addThing(each);
-    			System.out.println("test1");
     		} else {
+    			System.out.println(ofThings.getVolume());
     			ofThings.addThing(each);
-    			System.out.println("test2");
     		}
     	}
     	ofstuff.add(ofThings);
