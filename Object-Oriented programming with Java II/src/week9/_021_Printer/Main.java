@@ -6,20 +6,16 @@ import java.net.URI;
 import java.util.Scanner;
 
 public class Main {
-	
-	public static void main(String[] args) throws FileNotFoundException {
-        // The file we read
-		
-        File file = new File("resources\\test.txt");
 
-        Scanner reader = new Scanner(file);
-        while (reader.hasNextLine()) {
-            String line = reader.nextLine();
-            System.out.println(line);
-        }
+	public static void main(String[] args) throws Exception {
 
-        reader.close();
-        
+		Printer printer = new Printer("textfile.txt");
+
+		printer.printLinesWhichContain("Väinämöinen");
+		System.out.println("-----");
+		printer.printLinesWhichContain("Frank Zappa");
+		System.out.println("-----");
+		printer.printLinesWhichContain("");
+		System.out.println("-----");
 	}
-
 }
