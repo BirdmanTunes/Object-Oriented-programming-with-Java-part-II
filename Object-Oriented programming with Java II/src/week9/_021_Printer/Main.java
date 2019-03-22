@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
         // The file we read
 		
-        File file = new File("test.txt");
+        File file = new File("resource\\test.txt");
 
         Scanner reader = new Scanner(file);
         while (reader.hasNextLine()) {
@@ -20,7 +20,6 @@ public class Main {
 
         reader.close();
         
-        System.out.println(file.getPath());
 	}
 
 }
