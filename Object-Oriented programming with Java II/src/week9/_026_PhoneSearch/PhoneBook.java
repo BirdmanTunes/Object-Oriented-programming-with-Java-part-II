@@ -83,5 +83,16 @@ public class PhoneBook{
             System.out.println("");
         }
 	}
+	
+	public void listAll() {
+		for (String name : nameToPerson.keySet()){
+    		System.out.println("  " + name);
+    		System.out.print("    Address: ");
+    		addressByPerson(name);
+    		System.out.print("  ");
+    		searchByPerson(name);
+    		System.out.println("");
+		}
+	}
 }
 

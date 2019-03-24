@@ -127,7 +127,12 @@ public class UserInterface {
 		System.out.println("");
 		System.out.print("keyword (if empty, all listed): ");
 		String keyword = sc.nextLine();
-		ofPeople.filteredListing(keyword);
+			if (keyword.equals("")) {
+				System.out.println("");
+				ofPeople.listAll();
+			} else {
+				ofPeople.filteredListing(keyword);
+			}
 		System.out.println("");
 	}
 }
