@@ -25,34 +25,26 @@ public class Player {
 	
 	//moves player left if wall not there
 	public void moveLeft() {
-		if (length - 1 < 0) {
-		} else {
+		if (length - 1 >= 0)
 			length -= 1;
-		}
 	}
 	
 	//moves player right if wall not there
 	public void moveRight() {
-		if (length+1 > Dungeon.height -1) {
-		} else {
+		if (length+1 <= Dungeon.height -1)
 			length += 1;
-		}
 	}
 	
 	//moves player up if wall not there
 	public void moveUp() {
-		if (height-1 < 0) {
-		} else {
+		if (height-1 >= 0)
 			height -= 1;
-		}
 	}
 	
 	//moves player down if wall not there
 	public void moveDown() {
-		if (height+1 > Dungeon.height -1) {
-		} else {
+		if (height+1 <= Dungeon.height -1)
 			height += 1;
-		}
 	}
 
 }

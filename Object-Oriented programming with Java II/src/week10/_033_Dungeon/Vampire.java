@@ -4,19 +4,17 @@ import java.util.Random;
 
 public class Vampire{
 	
-	Random rand = new Random();
+	private Random rand = new Random();
 	
 	private int randheight;
 	private int randlenght;
 	
 	//spawns a vampire excluding the player original position
 	public Vampire(int height, int length) {
-		randheight = rand.nextInt(height);
-		randlenght = rand.nextInt(length);
-		while (randheight == 0 && randlenght == 0) {
+		do {
 			randheight = rand.nextInt(height);
 			randlenght = rand.nextInt(length);
-		}
+		} while (randheight == 0 && randlenght == 0);
 	}
 	
 	public int getRandheight() {

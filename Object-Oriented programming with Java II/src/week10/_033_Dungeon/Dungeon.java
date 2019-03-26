@@ -24,25 +24,8 @@ public class Dungeon extends Move{
 		spawnPlayer();
 		spawnVampires();
 //		printVamps();
-		while (true) {
-			remainingTurns();
-			remaningVamps();
-			map.printMap();
-			clearOldPlayerPosition();
-			askCommand();
-			spawnPlayer();
-			killVampIfThere();
-			clearOldVampPosition();
-			if (vampiresMove) {
-				moveOne();
+		while (takeTurn()) {
 			}
-			spawnVampires();
-			moves--;
-//			printVamps();
-			if (moves == 0 || vampiresCove.size() == 0) {
-				break;
-			}
-		}
 		endGame();
 	}
 	
@@ -55,6 +38,28 @@ public class Dungeon extends Move{
 		map = new MapGenerator(height, length);
 		vampiresCove = new ArrayList<Vampire>();
 	}
+	
+	public boolean takeTurn() {
+		remainingTurns();
+		remaningVamps();
+		map.printMap();
+		clearOldPlayerPosition();
+		askCommand();
+		spawnPlayer();
+		killVampIfThere();
+		clearOldVampPosition();
+		if (vampiresMove) {
+			moveOne();
+		}
+		spawnVampires();
+		moves--;
+//		printVamps();
+		if (moves == 0 || vampiresCove.size() == 0) {
+			return false;
+		}
+		return true;
+	}
+
 	
 	//asks a command from the user and updates player position based on those commands
 	public void askCommand() {
@@ -129,8 +134,6 @@ public class Dungeon extends Move{
 			}
 			vampiresCove.removeAll(toBeRemoved);
 		}
-		
-		
 	}
 	
 	//prints out the player remaining turns
@@ -167,7 +170,6 @@ public class Dungeon extends Move{
 		    uniques.add(element);
 		  }
 		}
-		
 		vampiresCove=uniques;
 	}
 	
