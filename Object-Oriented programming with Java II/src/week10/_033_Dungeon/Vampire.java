@@ -9,6 +9,7 @@ public class Vampire{
 	private int randheight;
 	private int randlenght;
 	
+	//spawns a vampire excluding the player original position
 	public Vampire(int height, int length) {
 		randheight = rand.nextInt(height);
 		randlenght = rand.nextInt(length);
@@ -26,6 +27,7 @@ public class Vampire{
 		return randlenght;
 	}
 	
+	//updates the position of the vampire
 	public void updatePos(int height, int length) {
 		randheight = height;
 		randlenght = length;
