@@ -1,4 +1,4 @@
-package week11._36_Greeter;
+package week11._036_Greeter;
 
 import java.awt.Container;
 import java.awt.Dimension;
