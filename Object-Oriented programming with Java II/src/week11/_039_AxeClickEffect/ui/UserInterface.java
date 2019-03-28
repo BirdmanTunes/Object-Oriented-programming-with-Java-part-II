@@ -28,16 +28,16 @@ public class UserInterface {
 		container.setLayout(clickLayout);
 		
 		JLabel counter = new JLabel("0");
-		clickLayout.addLayoutComponent(counter, BorderLayout.WEST);
-		
 		JButton clickButton = new JButton("Click!");
-		clickLayout.addLayoutComponent(clickButton, BorderLayout.SOUTH);
 		
-		ClickListener clickListen = new ClickListener(counter);
-		clickButton.addActionListener(clickListen);
+		clickButton.addActionListener(new ClickListener(counter));
 		
 		container.add((counter), BorderLayout.WEST);
 		container.add((clickButton), BorderLayout.SOUTH);
 	}
+	
+    public JFrame getFrame() {
+        return frame;
+    }
 
 }
