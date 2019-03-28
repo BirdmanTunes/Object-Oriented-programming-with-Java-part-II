@@ -19,7 +19,7 @@ public class ActionEventListener implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		final String savedText = "I was copied here from JTextArea.";
+		String savedText = "I was copied here from JTextArea.";
 		if (origin.getText().equals("")) {
 			origin.setText(savedText);
 			destination.setText("");
