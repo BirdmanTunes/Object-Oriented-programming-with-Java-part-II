@@ -1,6 +1,11 @@
 package week11._043_GameOfLife.gameoflife;
 
+
 import java.util.Random;
+
+import gameoflife.GameOfLifeBoard;
+
+
 
 public class PersonalBoard extends GameOfLifeBoard {
 
@@ -11,13 +16,13 @@ public class PersonalBoard extends GameOfLifeBoard {
 
 	@Override
 	public void turnToLiving(int x, int y) {
-//		if (!(getWidth() > x) || !(x < 0) || !(getHeight() < y) || !(y < 0)) 
+		if (!(getWidth() > x) || !(x < 0) || !(getHeight() > y) || !(y < 0)) 
 			getBoard()[y][x] = true;
 	}
 
 	@Override
 	public void turnToDead(int x, int y) {
-//		if (!(getWidth() < x) || !(x < 0) || !(getHeight() < y) || !(y < 0)) 
+		if (!(getWidth() < x) || !(x < 0) || !(getHeight() > y) || !(y < 0)) 
 			getBoard()[y][x] = false;
 	}
 
@@ -42,7 +47,6 @@ public class PersonalBoard extends GameOfLifeBoard {
 
 	@Override
 	public int getNumberOfLivingNeighbours(int x, int y) {
-		getBoard()[x][y] = false;
 		int counter = 0;
 		// upper left corner
 		if (!(x == 0) && !(y == 0)) {

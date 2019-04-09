@@ -1,8 +1,8 @@
 package week11._043_GameOfLife.gameoflife;
 
 import java.util.Scanner;
+import gameoflife.GameOfLifeBoard;
 
-import week11._043_GameOfLife.gameoflife.GameOfLifeBoard;
 
 // with this class you can test your code, check out assignment
 public class GameOfLifeTester {

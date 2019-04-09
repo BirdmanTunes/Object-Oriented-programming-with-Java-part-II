@@ -1,6 +1,5 @@
 package week11._043_GameOfLife.gameoflife;
 
-import gameoflife.GameOfLifeBoard;
 import gameoflife.Simulator;
 
 public class Main {
@@ -10,8 +9,11 @@ public class Main {
         PersonalBoard board = new PersonalBoard(100, 100);
         board.initiateRandomCells(0.7);
         
-        Simulator simulator = new Simulator(board);
-        simulator.simulate();
+//        Simulator simulator = new Simulator(board);
+//        simulator.simulate();
+        
+        GameOfLifeTester test = new GameOfLifeTester(board);
+        test.play();
 
 	}
 
