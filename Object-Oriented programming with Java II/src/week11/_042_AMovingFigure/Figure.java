@@ -23,7 +23,7 @@ public abstract class Figure {
 	}
 	
 	public int getY() {
-		return x;
+		return y;
 	}
 	
 	public abstract void draw(Graphics graphics);
